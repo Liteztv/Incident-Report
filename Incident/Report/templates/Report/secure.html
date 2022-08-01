@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Thank you for submitting your fire incident report.</h1>
+    <h1>fire incidents reported here.</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}   
+        <button type="submit">Submit</button>
+    </form>
+
+
 </body>
 </html>

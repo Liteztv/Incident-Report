@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from Report.models import ChemicalReport, MedicalReport, FireReport
-from . forms import ChemicalForm, FireForm, MedicalForm 
+from . forms import ChemicalForm, FireForm, MedicalForm, SecureForm 
 from django.views.generic.edit import FormView
 
 
@@ -81,3 +81,23 @@ def report_create_medical(request):
     return render(request,
                   'Report/medical.html',
                   {'form': form})  
+
+
+
+
+def report_create_secure(request):
+    if request.method == 'POST':
+        form = SecureForm(request.POST)
+        if form.is_valid():
+            form.instance.user = request.user
+            report = form.save()
+            
+            return render(request,
+                          'Report/secure_success.html',
+                          {'report': report,
+                           })
+    else:
+        form = SecureForm()
+    return render(request,
+                  'Report/secure.html',
+                  {'form': form})

@@ -41,3 +41,15 @@ class MedicalForm(forms.ModelForm):
                     'date_and_time_of_incident_end': DateInput(),
                     'debrief_date_time': DateInput()
         }
+
+
+class SecureForm(forms.ModelForm):
+    class Meta:
+        model = MedicalReport
+        exclude = [
+            'user', 'created', 'updated'         
+            ]
+        widgets = {'date_and_time_of_incident_start': DateInput(),
+                    'date_and_time_of_incident_end': DateInput(),
+                    'debrief_date_time': DateInput()
+        }

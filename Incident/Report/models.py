@@ -120,6 +120,30 @@ class ChemicalReport(models.Model):
     def __str__(self):
         return f'{self.user} on {self.created} . {self.incident_type}.'
 
+
+class SecureReport(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecureCreator')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    date_and_time_of_incident_start = models.DateTimeField()
+    date_and_time_of_incident_end = models.DateTimeField()
+    incident_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecureCommander')
+    incident_type = models.ForeignKey(IncidentType, on_delete=models.SET_NULL, null=True, help_text='IF OTHER PROVIDE DESCRIPTION')
+    cause_of_incident = models.TextField()
+    actions_taken = models.TextField()
+    equipment_used = models.TextField()
+    debrief_attendance = models.TextField()
+    positive_notes = models.TextField()
+    areas_of_improvement = models.TextField()
+    debrief_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,related_name='SecureDebriefCommander')
+    debrief_date_time = models.DateTimeField()
+
+    class Meta:
+        ordering = ['-created']
+
+    def __str__(self):
+        return f'{self.user} on {self.created} . {self.incident_type}.'
+
     
 
 # class GeneralReport(models.Model):
