@@ -1,10 +1,10 @@
 
-{%extends 'base.html'%}
+{% extends '/Report/base.html'%}
 {% block content %}
     <h1>Make all reports on this page.</h1>
 
     <p><form action="/Report/Fire" type="POST">
-        <button type="submit" value="Fire Incident" />
+        <button class ="menuButton" type="submit" value="Fire Incident" />
         </form>
     <a style="color:red;"  href="/Report/Fire">Fire Incident</a></p>
     
