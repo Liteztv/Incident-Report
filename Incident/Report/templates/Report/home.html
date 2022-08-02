@@ -1,6 +1,8 @@
 
 {% extends 'base.html' %}
 {% block content %}
+
+<div class="homeBody"
     <h1>Make all reports on this page.</h1>
 
     <p><form action="/Report/Fire" type="POST">
@@ -24,4 +26,6 @@
         <form action="/Report/Secure" type="POST">
             <button class ="menuButton" type="submit" value="Security Incident">Security Incident</button>
             </form>
+
+
 {% endblock %}
