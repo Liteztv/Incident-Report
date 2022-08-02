@@ -5,7 +5,7 @@ from django.views.generic.edit import FormView
 
 
 def home_view(request):
-    return render(request,'Report/base.html')
+    return render(request,'Report/home.html')
 
 # # def fires_view(request):
 # #     return render(request,'Report/fire.html')
