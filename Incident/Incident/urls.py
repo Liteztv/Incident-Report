@@ -20,5 +20,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Report/',include('Report.urls')),
-    path('',RedirectView.as_view(url='/Report/'))
+    path('',RedirectView.as_view(url='/Report/')),
+    path('accounts/',include('django.contrib.auth.urls'))
 ]

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from Report.models import ChemicalReport, MedicalReport, FireReport
 from . forms import ChemicalForm, FireForm, MedicalForm, SecureForm 
 from django.views.generic.edit import FormView
@@ -29,7 +30,7 @@ def home_view(request):
 #         form.save()
 #         return super(ChemicalFormView, self).form_valid(form)
 
-
+@login_required
 def report_create_chemical(request):
     if request.method == 'POST':
         form = ChemicalForm(request.POST)
@@ -46,7 +47,7 @@ def report_create_chemical(request):
     return render(request,
                   'Report/chemical.html',
                   {'form': form})
-
+@login_required
 def report_create_fire(request):
     if request.method == 'POST':
         form = FireForm(request.POST)
@@ -64,7 +65,7 @@ def report_create_fire(request):
                   'Report/fire.html',
                   {'form': form})        
 
-
+@login_required
 def report_create_medical(request):
     if request.method == 'POST':
         form = MedicalForm(request.POST)
@@ -84,7 +85,7 @@ def report_create_medical(request):
 
 
 
-
+@login_required
 def report_create_secure(request):
     if request.method == 'POST':
         form = SecureForm(request.POST)
