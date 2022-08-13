@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>detail view</h1>
+<p>
+{{chemicalreport.user}} created this report on {{chemicalreport.created}}
+<br>
+<br>
+A {{chemicalreport.incident_type}} started at {{chemicalreport.date_and_time_of_incident_start}} and ended at {{chemicalreport.date_and_time_of_incident_end}}
+<br>
+<br>
+{{chemicalreport.incident_commander}} was the incident commander
+<br><br>
+The cause of the spill : {{chemicalreport.cause_of_incident}}
+<br><br>
+Actions taken: {{chemicalreport.actions_taken}}
+<br><br>
+Equipment Used: {{chemicalreport.equipment_used}}
+<br><br>
+Substance was identified as: {{chemicalreport.identify_substance}}
+<br><br>
+Physical Description of the substance: {{chemicalreport.physical_description}}
+<br><br>
+Did material run off the property? {{chemicalreport.material_run_off_property}}
+<br><br>
+Were agencies notified ? {{chemicalreport.agencies_notified}}
+<br><br>
+Was the environment affected ? {{chemical.Environment_affected}}
+<br><br>
+Were there any employee chemical exposure ? {{chemicalreport.employee_chemical_exposure}}
+<br><br>
+Were any employees injured ? {{chemicalreport.employee_injured}}
+<br>
+Phone number of any injured employees: {{chemicalreport.employee_phone_number}}
+<br><br>
+Was there public chemical exposure ? {{chemicalreport.public_chemical_exposure}}
+<br><br>
+Was any of the public injured ? {{chemicalreport.public_injured}}
+<br><br><br><br>
+Debrief was started at {{chemicalreport.debrief_date_time}} by {{chemicalreport.debrief_commander}}
+<br><br>
+Debrief Attendance: {{chemicalreport.debrief_attendance}}
+<br><br>
+Positive Notes: {{chemicalreport.positive_notes}}
+<br><br>
+Areas of Improvement: {{chemicalreport.areas_of_improvement}}
+
+
+
+
+</p>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="homeBody">
+    <h1>Lists of All Incident Reports</h1>
+    
+    <p>
+        <form action="/Report/fire_list" type="POST">
+            <button class ="menuButton" type="submit" value="Fire List">List of Fire Incidents</button>
+            </form>        
+            
+    <p>
+         <form action="/Report/chemical_list" type="POST">
+            <button class ="menuButton" type="submit" value="Chemical List">List of Chemical Incidents</button>
+            </form>
+            
+    <p>
+        <form action="/Report/medical_list" type="POST">
+            <button class ="menuButton" type="submit" value="Medical List">List of Medical Incidents</button>
+            </form>
+
+    <!-- <p>
+        <form action="/Report/secure_list" type="POST">
+            <button class ="menuButton" type="submit" value="Security List">List of Security Incidents</button>
+            </form> -->
+
+</div>
+
+<!-- GITHUB test-->
+
+{% endblock %}

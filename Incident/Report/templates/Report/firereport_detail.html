@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>detail view</h1>
+<p>
+{{firereport.user}} created this report on {{firereport.created}}
+<br>
+<br>
+A {{firereport.incident_type}} started at {{firereport.date_and_time_of_incident_start}} and ended at {{firereport.date_and_time_of_incident_end}}
+<br>
+<br>
+{{firereport.incident_commander}} was the incident commander
+<br><br>
+The cause of the fire : {{firereport.cause_of_incident}}
+<br><br>
+Actions taken: {{firereport.actions_taken}}
+<br><br>
+Equipment Used: {{firereport.equipment_used}}
+<br><br>
+Debrief was started at {{firereport.debrief_date_time}} by {{firereport.debrief_commander}}
+<br><br>
+Debrief Attendance: {{firereport.debrief_attendance}}
+<br><br>
+Positive Notes: {{firereport.positive_notes}}
+<br><br>
+Areas of Improvement: {{firereport.areas_of_improvement}}
+
+
+
+
+</p>
+
+
+{% endblock %}

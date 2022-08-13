@@ -38,7 +38,7 @@ class FireReport(models.Model):
         ordering = ['-created']
 
     def __str__(self):
-        return f'{self.user} on {self.created} . {self.incident_type}.'
+        return f'{self.user} reported {self.incident_type} on {self.created} .'
 
 
 class MedicalReport(models.Model):

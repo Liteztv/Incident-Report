@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from Report.models import ChemicalReport, MedicalReport, FireReport
+from Report.models import ChemicalReport, MedicalReport, FireReport, SecureReport
 from . forms import ChemicalForm, FireForm, MedicalForm, SecureForm 
 from django.views.generic.edit import FormView
+from django.views.generic.list import ListView
+from django.views.generic import DetailView
 
 
 def home_view(request):
     return render(request,'Report/home.html')
+
+def list_view(request):
+    return render(request,'Report/incidentslist.html')
 
 # # def fires_view(request):
 # #     return render(request,'Report/fire.html')
@@ -102,3 +107,23 @@ def report_create_secure(request):
     return render(request,
                   'Report/secure.html',
                   {'form': form})
+
+
+class FireListView(ListView):
+    model = FireReport
+
+class ChemicalListView(ListView):
+    model = ChemicalReport
+
+class MedicalListView(ListView):
+    model = MedicalReport
+
+class SecureListView(ListView):
+    model = SecureReport
+
+class FireDetailView(DetailView):
+    model = FireReport
+
+class ChemicalDetailView(DetailView):
+    model = ChemicalReport
+
