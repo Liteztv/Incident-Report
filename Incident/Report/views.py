@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from Report.models import ChemicalReport, MedicalReport, FireReport, SecureReport
-from . forms import ChemicalForm, FireForm, MedicalForm, SecureForm 
+from Report.models import ChemicalReport, MedicalReport, FireReport, SecurityReport
+from . forms import ChemicalForm, FireForm, MedicalForm, SecurityForm 
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
 from django.views.generic import DetailView
@@ -91,21 +91,21 @@ def report_create_medical(request):
 
 
 @login_required
-def report_create_secure(request):
+def report_create_security(request):
     if request.method == 'POST':
-        form = SecureForm(request.POST)
+        form = SecurityForm(request.POST)
         if form.is_valid():
             form.instance.user = request.user
             report = form.save()
             
             return render(request,
-                          'Report/secure_success.html',
+                          'Report/security_success.html',
                           {'report': report,
                            })
     else:
-        form = SecureForm()
+        form = SecurityForm()
     return render(request,
-                  'Report/secure.html',
+                  'Report/security.html',
                   {'form': form})
 
 
@@ -118,12 +118,15 @@ class ChemicalListView(ListView):
 class MedicalListView(ListView):
     model = MedicalReport
 
-class SecureListView(ListView):
-    model = SecureReport
+class SecurityListView(ListView):
+    model = SecurityReport
 
 class FireDetailView(DetailView):
     model = FireReport
 
 class ChemicalDetailView(DetailView):
     model = ChemicalReport
+
+class MedicalDetailView(DetailView):
+    model = MedicalReport
 

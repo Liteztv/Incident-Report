@@ -2,8 +2,8 @@
 {% block content %}
 
 <h1>security incidents</h1>
-<ul>{% for securereport in object_list %}
-    <li>{{securereport.incident_type}} {{securereport.created}}</li>
+<ul>{% for securityreport in object_list %}
+    <li>{{securityreport.incident_type}} {{securityreport.created}}</li>
     
 {% endfor %}
 

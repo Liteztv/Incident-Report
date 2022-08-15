@@ -121,13 +121,13 @@ class ChemicalReport(models.Model):
         return f'{self.user} on {self.created} . {self.incident_type}.'
 
 
-class SecureReport(models.Model):
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecureCreator')
+class SecurityReport(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecurityCreator')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     date_and_time_of_incident_start = models.DateTimeField()
     date_and_time_of_incident_end = models.DateTimeField()
-    incident_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecureCommander')
+    incident_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecurityCommander')
     incident_type = models.ForeignKey(IncidentType, on_delete=models.SET_NULL, null=True)
     cause_of_incident = models.TextField()
     actions_taken = models.TextField()
@@ -135,7 +135,7 @@ class SecureReport(models.Model):
     debrief_attendance = models.TextField()
     positive_notes = models.TextField()
     areas_of_improvement = models.TextField()
-    debrief_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,related_name='SecureDebriefCommander')
+    debrief_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,related_name='SecurityDebriefCommander')
     debrief_date_time = models.DateTimeField()
 
     class Meta:

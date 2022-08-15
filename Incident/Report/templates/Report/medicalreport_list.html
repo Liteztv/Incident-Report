@@ -4,7 +4,7 @@
 
 <h1>list of medical incidents</h1>
 <ul>{% for medicalreport in object_list %}
-    <li>{{medicalreport.incident_type}} {{medicalreport.created}}</li>
+    <li><a href="/Report/medicalreport_detail/{{medicalreport.id}}">{{medicalreport.incident_type}} {{medicalreport.created}}</a></li>
 {% endfor %}
 </ul>
 

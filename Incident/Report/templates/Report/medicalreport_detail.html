@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>detail view</h1>
+<p>
+{{medicalreport.user}} created this report on {{medicalreport.created}}
+<br>
+<br>
+A {{medicalreport.incident_type}} started at {{medicalreport.date_and_time_of_incident_start}} and ended at {{medicalreport.date_and_time_of_incident_end}}
+<br>
+<br>
+{{medicalreport.incident_commander}} was the incident commander
+<br><br>
+The cause of the incident : {{medicalreport.cause_of_incident}}
+<br><br>
+Actions taken: {{medicalreport.actions_taken}}
+<br><br>
+Equipment Used: {{medicalreport.equipment_used}}
+<br><br>
+Patient Name: {{medicalreport.patient_name}}
+<br><br>
+Patient Age: {{medicalreport.patient_age}}
+<br><br>
+Patient Legal Gender: {{medicalreport.legal_gender}}
+<br><br>
+Patients Address: {{medicalreport.patient_address}}
+<br><br>
+Patient Phone Number: {{medicalreport.patient_phone_number}}
+<br><br>
+Emergency Contact: {{medicalreport.emergency_contact}}
+<br><br>
+Level of conciousness: {{medicalreport.level_of_conciousness}}
+<br><br>
+Loss of Conciousness: {{medicalreport.loss_of_conciousness}}
+<br><br>
+Patients Symptoms: {{medicalreport.symptoms}}
+<br><br>
+Patients Chief Complaint: {{medicalreport.chief_complaint}}
+<br><br>
+What happened: {{medicalreport.what_happened}}
+<br><br>
+Is this a preexisting condition ? {{medicalreport.preexisting_condition}}
+<br><br>
+When was the last time that the patient ate ? {{medicalreport.last_time_patient_ate}}
+<br><br> 
+Drug Allergies: {{medicalreport.drug_allergies}}
+<br><br>
+Skin color and temperature: {{medicalreport.skin_color_and_temp}}
+<br><br>
+Eyes PERRLA: {{medicalreport.eyes_perl}}
+<br><br>
+Respirations: {{medicalreport.respirations}}
+<br><br>
+Was an ambulance called ? {{medicalreport.ambulance_called}}
+<br><br>
+What hospital were they taken to ?  {{medicalreport.hospital}}
+<br><br>
+Did employee refuse treatment ? {{medicalreport.employee_refused_treatment}}
+<br><br>
+First aid providers name: {{medicalreport.first_aid_providers_name}}
+<br><br>
+Debrief was started at {{medicalreport.debrief_date_time}} by {{medicalreport.debrief_commander}}
+<br><br>
+Debrief Attendance: {{medicalreport.debrief_attendance}}
+<br><br>
+Positive Notes: {{medicalreport.positive_notes}}
+<br><br>
+Areas of Improvement: {{medicalreport.areas_of_improvement}}
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+{% endblock %}
