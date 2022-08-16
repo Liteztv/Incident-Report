@@ -20,6 +20,6 @@ class PassengerPathInfoFix(object):
 
 
 # Replace projectname with the name of the main folder containing wsgi.py and setting.py
-import Incident.Incident.wsgi
-application = Incident.Incident.wsgi.application
+import Incident.wsgi
+application = Incident.wsgi.application
 application = PassengerPathInfoFix(application)
