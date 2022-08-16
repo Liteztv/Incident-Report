@@ -1,3 +1,6 @@
+import os
+import sys
+
 class PassengerPathInfoFix(object):
     """
     Sets PATH_INFO from REQUEST_URI since Passenger doesn't provide it.
@@ -7,7 +10,7 @@ class PassengerPathInfoFix(object):
 
     def call(self, environ, start_response):
         from urllib.parse import unquote
-        environ['SCRIPT_NAME'] = SCRIPT_NAME
+        environ['SCRIPT_NAME'] = ''
 
         request_uri = unquote(environ['REQUEST_URI'])
         script_name = unquote(environ.get('SCRIPT_NAME', ''))
