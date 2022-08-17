@@ -1,6 +1,6 @@
 from django import forms
 from matplotlib import widgets
-from . models import ChemicalReport, FireReport, MedicalReport,SecurityReport
+from . models import ChemicalReport, FireReport, MedicalReport,ScReport
 
 class DateInput(forms.DateTimeInput):
     input_type = 'datetime-local'
@@ -43,9 +43,9 @@ class MedicalForm(forms.ModelForm):
         }
 
 
-class SecurityForm(forms.ModelForm):
+class ScForm(forms.ModelForm):
     class Meta:
-        model = SecurityReport
+        model = ScReport
         exclude = [
             'user', 'created', 'updated'         
             ]
@@ -53,3 +53,4 @@ class SecurityForm(forms.ModelForm):
                     'date_and_time_of_incident_end': DateInput(),
                     'debrief_date_time': DateInput()
         }
+

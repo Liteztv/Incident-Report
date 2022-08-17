@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>list of Security incidents</h1>
+<ul>{% for screport in object_list %}
+    <li>{{screport.incident_type}} {{screport.created}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

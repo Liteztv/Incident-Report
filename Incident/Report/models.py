@@ -120,8 +120,7 @@ class ChemicalReport(models.Model):
     def __str__(self):
         return f'{self.user} on {self.created} . {self.incident_type}.'
 
-
-class SecurityReport(models.Model):
+class ScReport(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='SecurityCreator')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -143,7 +142,6 @@ class SecurityReport(models.Model):
 
     def __str__(self):
         return f'{self.user} on {self.created} . {self.incident_type}.'
-
     
 
 # class GeneralReport(models.Model):

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from Report.models import ChemicalReport, MedicalReport, FireReport, SecurityReport
-from . forms import ChemicalForm, FireForm, MedicalForm, SecurityForm 
+from Report.models import ChemicalReport, MedicalReport, FireReport,ScReport
+from . forms import ChemicalForm, FireForm, MedicalForm,ScForm 
 from django.views.generic.edit import FormView
 from django.views.generic.list import ListView
 from django.views.generic import DetailView
@@ -53,6 +53,7 @@ def report_create_chemical(request):
     return render(request,
                   'Report/chemical.html',
                   {'form': form})
+
 @login_required
 def report_create_fire(request):
     if request.method == 'POST':
@@ -89,26 +90,23 @@ def report_create_medical(request):
                   'Report/medical.html',
                   {'form': form})  
 
-
-
 @login_required
-def report_create_security(request):
+def report_create_sc(request):
     if request.method == 'POST':
-        form = SecurityForm(request.POST)
+        form = ScForm(request.POST)
         if form.is_valid():
             form.instance.user = request.user
             report = form.save()
             
             return render(request,
-                          'Report/security_success.html',
+                          'Report/sc_success.html',
                           {'report': report,
                            })
     else:
-        form = SecurityForm()
+        form = MedicalForm()
     return render(request,
-                  'Report/security.html',
+                  'Report/sc.html',
                   {'form': form})
-
 
 class FireListView(ListView):
     model = FireReport
@@ -119,8 +117,8 @@ class ChemicalListView(ListView):
 class MedicalListView(ListView):
     model = MedicalReport
 
-class SecurityListView(ListView):
-    model = SecurityReport
+class ScListView(ListView):
+    model = ScReport
 
 class FireDetailView(DetailView):
     model = FireReport

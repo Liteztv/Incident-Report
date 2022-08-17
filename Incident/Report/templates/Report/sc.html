@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>Security incidents reported here.</h1>
+    <h1>Create Security Incident</h1>
 
     <form method="post">
         {% csrf_token %}
@@ -9,5 +9,4 @@
         <button type="submit">Submit</button>
     </form>
 
-
-    {% endblock %}
+{% endblock %}
