@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from .views import (FireDetailView, FireListView,ChemicalListView,
-                    MedicalListView,ChemicalDetailView,ScListView,
+                    MedicalListView,ChemicalDetailView,ScListView,ScDetailView,
                     MedicalDetailView)
 
 urlpatterns = [
@@ -17,5 +17,6 @@ urlpatterns = [
     path('Lists',views.list_view, name='Lists'),
     path('firereport_detail/<int:pk>',FireDetailView.as_view(),name='firereport_detail'),
     path('chemicalreport_detail/<int:pk>',ChemicalDetailView.as_view(),name='chemicalreport_detail'),
+    path('screport_detail/<int:pk>',ScDetailView.as_view(),name='Screport_detail'),
     path('medicalreport_detail/<int:pk>',MedicalDetailView.as_view(),name='medicalreport_detail')
 ]

@@ -129,3 +129,5 @@ class ChemicalDetailView(DetailView):
 class MedicalDetailView(DetailView):
     model = MedicalReport
 
+class ScDetailView(DetailView):
+    model = ScReport

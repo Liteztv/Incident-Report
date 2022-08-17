@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>detail view</h1>
+<p>
+{{screport.user}} created this report on {{screport.created}}
+<br>
+<br>
+A {{screport.incident_type}} started at {{screport.date_and_time_of_incident_start}} and ended at {{screport.date_and_time_of_incident_end}}
+<br>
+<br>
+{{screport.incident_commander}} was the incident commander
+<br><br>
+The cause of the incident : {{screport.cause_of_incident}}
+<br><br>
+Actions taken: {{screport.actions_taken}}
+<br><br>
+Equipment Used: {{screport.equipment_used}}
+<br><br><br><br>
+Debrief was started at {{screport.debrief_date_time}} by {{screport.debrief_commander}}
+<br><br>
+Debrief Attendance: {{screport.debrief_attendance}}
+<br><br>
+Positive Notes: {{screport.positive_notes}}
+<br><br>
+Areas of Improvement: {{screport.areas_of_improvement}}
+
+
+
+
+</p>
+
+
+{% endblock %}
