@@ -10,6 +10,7 @@ from django.views.generic import DetailView
 def home_view(request):
     return render(request,'Report/home.html')
 
+@login_required
 def list_view(request):
     return render(request,'Report/incidentslist.html')
 
