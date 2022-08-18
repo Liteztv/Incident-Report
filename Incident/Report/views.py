@@ -103,7 +103,7 @@ def report_create_sc(request):
                           {'report': report,
                            })
     else:
-        form = MedicalForm()
+        form = ScForm()
     return render(request,
                   'Report/sc.html',
                   {'form': form})
