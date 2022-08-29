@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<h1>list of chemical incidents</h1>
+<h1>Reported Chemical Incidents</h1>
 <ul>{% for chemicalreport in object_list %}
     <li><a href="/Report/chemicalreport_detail/{{chemicalreport.id}}">{{chemicalreport.incident_type}} {{chemicalreport.created}}</a></li>
 {% endfor %}

@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<h1>list of fire incidents</h1>
+<h1>Reported Fire Incidents</h1>
 <ul>{% for firereport in object_list %}
     <li><a href="/Report/firereport_detail/{{firereport.id}}">{{firereport.incident_type}} {{firereport.created}}</a></li>
 {% endfor %}

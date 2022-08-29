@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>detail view</h1>
+<h1>Security Report</h1>
 <p>
 {{screport.user}} created this report on {{screport.created}}
 <br>
@@ -15,15 +15,15 @@ The cause of the incident : {{screport.cause_of_incident}}
 <br><br>
 Actions taken: {{screport.actions_taken}}
 <br><br>
-Equipment Used: {{screport.equipment_used}}
+Equipment used: {{screport.equipment_used}}
 <br><br><br><br>
 Debrief was started at {{screport.debrief_date_time}} by {{screport.debrief_commander}}
 <br><br>
-Debrief Attendance: {{screport.debrief_attendance}}
+Debrief attendance: {{screport.debrief_attendance}}
 <br><br>
-Positive Notes: {{screport.positive_notes}}
+Positive notes: {{screport.positive_notes}}
 <br><br>
-Areas of Improvement: {{screport.areas_of_improvement}}
+Areas of improvement: {{screport.areas_of_improvement}}
 
 
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>detail view</h1>
+<h1>Fire Report</h1>
 <p>
 {{firereport.user}} created this report on {{firereport.created}}
 <br>
@@ -15,15 +15,15 @@ The cause of the fire : {{firereport.cause_of_incident}}
 <br><br>
 Actions taken: {{firereport.actions_taken}}
 <br><br>
-Equipment Used: {{firereport.equipment_used}}
+Equipment used: {{firereport.equipment_used}}
 <br><br><br><br>
 Debrief was started at {{firereport.debrief_date_time}} by {{firereport.debrief_commander}}
 <br><br>
-Debrief Attendance: {{firereport.debrief_attendance}}
+Debrief attendance: {{firereport.debrief_attendance}}
 <br><br>
-Positive Notes: {{firereport.positive_notes}}
+Positive notes: {{firereport.positive_notes}}
 <br><br>
-Areas of Improvement: {{firereport.areas_of_improvement}}
+Areas of improvement: {{firereport.areas_of_improvement}}
 
 
 

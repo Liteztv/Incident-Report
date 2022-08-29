@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>detail view</h1>
+<h1>Chemical Report</h1>
 <p>
 {{chemicalreport.user}} created this report on {{chemicalreport.created}}
 <br>
@@ -15,11 +15,11 @@ The cause of the spill : {{chemicalreport.cause_of_incident}}
 <br><br>
 Actions taken: {{chemicalreport.actions_taken}}
 <br><br>
-Equipment Used: {{chemicalreport.equipment_used}}
+Equipment used: {{chemicalreport.equipment_used}}
 <br><br>
 Substance was identified as: {{chemicalreport.identify_substance}}
 <br><br>
-Physical Description of the substance: {{chemicalreport.physical_description}}
+Physical description of the substance: {{chemicalreport.physical_description}}
 <br><br>
 Did material run off the property? {{chemicalreport.material_run_off_property}}
 <br><br>
@@ -39,11 +39,11 @@ Was any of the public injured ? {{chemicalreport.public_injured}}
 <br><br><br><br>
 Debrief was started at {{chemicalreport.debrief_date_time}} by {{chemicalreport.debrief_commander}}
 <br><br>
-Debrief Attendance: {{chemicalreport.debrief_attendance}}
+Debrief attendance: {{chemicalreport.debrief_attendance}}
 <br><br>
-Positive Notes: {{chemicalreport.positive_notes}}
+Positive notes: {{chemicalreport.positive_notes}}
 <br><br>
-Areas of Improvement: {{chemicalreport.areas_of_improvement}}
+Areas of improvement: {{chemicalreport.areas_of_improvement}}
 
 
 

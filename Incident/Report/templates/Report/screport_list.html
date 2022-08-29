@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<h1>List of Security Incidents</h1>
+<h1>Reported Security Incidents</h1>
 <ul>{% for screport in object_list %}
     <li><a href="/Report/screport_detail/{{screport.id}}">{{screport.incident_type}} {{screport.created}}</a></li>
 {% endfor %}
