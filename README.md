@@ -1,6 +1,6 @@
 # incident-report
 
-https://incidentreport.ffi.a2hosted.com/Report/
+# https://incidentreport.ffi.a2hosted.com/Report/
 
 # Emergency Response Teams have to make an incident report after any incident or drill. These reports are made on paper and include easily forgotten or incorrectly remembered information such as start time of incident. 
 

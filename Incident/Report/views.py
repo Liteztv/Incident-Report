@@ -10,7 +10,7 @@ from django.views.generic import DetailView
 def home_view(request):
     return render(request,'Report/home.html')
 
-@login_required
+# @login_required
 def list_view(request):
     return render(request,'Report/incidentslist.html')
 
@@ -36,7 +36,7 @@ def list_view(request):
 #         form.save()
 #         return super(ChemicalFormView, self).form_valid(form)
 
-@login_required
+# @login_required
 def report_create_chemical(request):
     if request.method == 'POST':
         form = ChemicalForm(request.POST)
@@ -54,7 +54,7 @@ def report_create_chemical(request):
                   'Report/chemical.html',
                   {'form': form})
 
-@login_required
+# @login_required
 def report_create_fire(request):
     if request.method == 'POST':
         form = FireForm(request.POST)
@@ -72,7 +72,7 @@ def report_create_fire(request):
                   'Report/fire.html',
                   {'form': form})        
 
-@login_required
+# @login_required
 def report_create_medical(request):
     if request.method == 'POST':
         form = MedicalForm(request.POST)
@@ -90,7 +90,7 @@ def report_create_medical(request):
                   'Report/medical.html',
                   {'form': form})  
 
-@login_required
+# @login_required
 def report_create_sc(request):
     if request.method == 'POST':
         form = ScForm(request.POST)
