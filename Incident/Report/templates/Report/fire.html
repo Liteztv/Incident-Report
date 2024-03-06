@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class="homeBody">
     <h1>Create Fire Incident Report Here</h1>
 
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}   
-        <button type="submit">Submit</button>
+        <button class="menuButton" type="submit">Submit</button>
     </form>
-
+</div>
 {% endblock %}
