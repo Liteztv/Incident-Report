@@ -44,8 +44,8 @@
                 color:red;
             }
 
-            button.home{
-                align-self: center;
+            button.homer{
+                align-content: center;
                 height: 160;
                 width: 20%;
                 background-color: slategrey;
@@ -56,7 +56,7 @@
                 text-decoration: none;
                 font-weight: bold;
                 font-style: none;
-                display: block;
+                display: inline-block;
                 font-size: 24px; 
             }
             
@@ -71,20 +71,19 @@
 
 <!-- Content Container -->
 <div class="container">
-    <nav class="navbar navbar-expand-lg" >
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form action="/Report/" type="POST">
-                  
-                    <button class ="home" type="submit" value="Home">Incident Reporting</button>
-                </form>
+    <div class="homeBody">
+    
+    <form action="/Report/" type="POST">
+        <button class ="homer" type="submit" value="Home Button">Incident Reporting</button>
+        </form>
             
                 
-            </div>
-        </div>
-    </nav>
+            
     {% block content %}
+        
+
     {% endblock %}
+</div>
 </div>
 
     </body>
