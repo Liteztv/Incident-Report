@@ -25,7 +25,7 @@ class FireReport(models.Model):
     date_and_time_of_incident_end = models.DateTimeField()
     incident_commander = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='FireCommander')
     incident_type = models.ForeignKey(IncidentType, on_delete=models.SET_NULL, null=True)
-    cause_of_incident = models.TextField()
+    cause_of_incident = models.CharField(max_length=140)
     actions_taken = models.TextField()
     equipment_used = models.TextField()
     debrief_attendance = models.TextField()
