@@ -43,6 +43,22 @@
             .myfieldclass{
                 color:red;
             }
+
+            button.home{
+                align-self: center;
+                height: 160;
+                width: 20%;
+                background-color: slategrey;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                font-style: none;
+                display: block;
+                font-size: 24px; 
+            }
             
 
         </style>
@@ -55,6 +71,18 @@
 
 <!-- Content Container -->
 <div class="container">
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form action="/Report/" type="POST">
+                  
+                    <button class ="home" type="submit" value="Home">Incident Reporting</button>
+                </form>
+            
+                
+            </div>
+        </div>
+    </nav>
     {% block content %}
     {% endblock %}
 </div>
