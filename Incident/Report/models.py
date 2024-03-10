@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 from sympy import ordered
 
 class YesNo(models.Model):
-    description = models.CharField(max_length=140,blank=True, null=True)
+    bool = models.CharField(max_length=10,blank=True, null=True)
 
     def __str__(self):
-        return self.type
+        return self.bool
 
 class IncidentType(models.Model):
     type = models.CharField(max_length=100)
@@ -14,7 +14,6 @@ class IncidentType(models.Model):
 
     def __str__(self):
         return self.type
-
 class PhysicalDescription(models.Model):
     state = models.CharField(max_length=100)    
     other = models.CharField(max_length=100, blank=True, null=True)
