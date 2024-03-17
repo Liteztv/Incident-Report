@@ -31,6 +31,7 @@ class FireReport(models.Model):
     incident_type = models.ForeignKey(IncidentType, on_delete=models.SET_NULL, null=True)
     cause_of_incident = models.CharField(max_length=140)
     actions_taken = models.TextField()
+    Test = models.BooleanField(null=True, blank=True)
     equipment_used = models.TextField()
     debrief_attendance = models.TextField()
     positive_notes = models.TextField()
