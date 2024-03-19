@@ -63,7 +63,7 @@ class MedicalReport(models.Model):
     patient_phone_number = models.CharField(max_length=15)
     emergency_contact = models.CharField(max_length=100)
     level_of_conciousness = models.CharField(max_length=2)
-    loss_of_consciousness = models.ForeignKey(YesNo, on_delete=models.SET_NULL, null=True, related_name='LossOfConsciousness')
+    loss_of_conciousness = models.ForeignKey(YesNo, on_delete=models.SET_NULL, null=True, related_name='LossOfConsciousness')
     symptoms = models.TextField()
     chief_complaint = models.CharField(max_length=100)
     what_happened = models.TextField()
